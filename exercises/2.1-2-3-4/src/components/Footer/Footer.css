@@ -1,0 +1,40 @@
+.mon-super-footer{
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background:
+    linear-gradient(180deg, rgba(13,18,32,.9), rgba(10,14,24,.9)),
+    radial-gradient(800px 200px at 80% -40%, #6aa8ff0f, transparent 60%),
+    radial-gradient(800px 200px at 0% 140%, #9d7dff0f, transparent 60%);
+  border-top: 1px solid rgba(67, 88, 140, .35);
+  padding-inline: max(18px, calc((100vw - min(1100px, 92vw)) / 2));
+}
+
+.mon-super-footer > img{
+  width: 42px; height: 42px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(157,125,255,.35);
+  box-shadow: 0 4px 14px rgba(157,125,255,.22);
+}
+
+.contenu-du-footer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9aa4b2;
+  font-size: .92rem;
+}
+
+/* subtle link style if you put links in footer children */
+.contenu-du-footer a{
+  color: #cfe0ff;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(207,224,255,.4);
+}
+.contenu-du-footer a:hover{
+  border-bottom-style: solid;
+}

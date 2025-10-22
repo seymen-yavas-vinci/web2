@@ -1,0 +1,46 @@
+.mon-super-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  backdrop-filter: saturate(140%) blur(10px);
+  background: linear-gradient(180deg, rgba(16,22,37,.75), rgba(10,14,24,.55));
+  border-bottom: 1px solid rgba(67, 88, 140, .35);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 30%);
+  padding-inline: max(18px, calc((100vw - min(1100px, 92vw)) / 2));
+}
+
+.mon-super-header > img{
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(106, 168, 255, .35);
+  box-shadow: 0 6px 16px rgba(106,168,255,.25);
+}
+
+.contenu-du-header{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* small subtitle / emoji track */
+.contenu-du-header::after{
+  content: "🎬 Séances & réalisateurs";
+  font-size: .85rem;
+  color: #9aa4b2;
+  letter-spacing: .2px;
+}
+
+/* make the magic wand emoji float a bit */
+.contenu-du-header :where(*) + *{
+  position: relative;
+}
+.contenu-du-header :where(*) + *::after{
+  /* targets the '🪄' you put after children; gives space */
+  content: "";
+  position:absolute; right: -12px; top: 6px; width: 0; height: 0;
+}
