@@ -5,7 +5,7 @@ import Footer from "../Footer";
 import './App.css';
 
 const App = () => {
-  const pageTitle = "Informations sur les films dans les cinémas";
+  const pageTitle = "Info sur les films dans les cinémas";
 
   const cinema1Name = "UGC DeBrouckère";
 
@@ -51,15 +51,13 @@ const moviesCinema2 = [
 
   
   return (
-    <div>
+    <div className="app-shell">
       <Header logoUrl="https://media.istockphoto.com/id/1345789057/vector/vector-astronaut-in-space-stock-illustration.jpg?s=2048x2048&w=is&k=20&c=ynp_S27xJYos_Eyod2SqmMJfdLooAVVNIqh_BZQcE3Q=">
         <PageTitle title={pageTitle} />
       </Header>
 
-      <main className="card-stack">
       <Cinema name={cinema1Name} movies={moviesCinema1} />
       <Cinema name={cinema2Name} movies={moviesCinema2} />
-    </main>
 
       <Footer logoUrl="https://images.unsplash.com/photo-1701524251959-80545bb64402?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070"> </Footer>
     </div>
