@@ -1,0 +1,100 @@
+/* ---------- Thème & base ---------- */
+:root{
+  --bg: #0f0a1f;
+  --bg-soft: #18122e;
+  --violet: #6d4aff;
+  --violet-2: #8c6bff;
+  --text: #f4f1ff;
+  --muted: #c8c2e8;
+  --card: #1d153b;
+  --border: #2b2154;
+
+  /* Hauteur du footer (doit matcher Footer.css) */
+  --footer-h: 80px;
+}
+
+.app-shell{
+  max-width: 960px;
+  margin: 0 auto;  /* <- centre horizontalement */
+  padding: 24px 16px calc(24px + var(--footer-h));
+}
+
+*{ box-sizing: border-box; }
+
+html, body, #root{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 800px at 10% -10%, #2a1a55 0%, transparent 60%),
+    radial-gradient(1000px 700px at 110% 10%, #241c4a 0%, transparent 60%),
+    var(--bg);
+}
+
+/* ---------- Mise en page générale ---------- */
+/* Centre le contenu principal et ajoute un padding bas
+   pour ne pas masquer par le footer fixé */
+#root > div{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px calc(24px + var(--footer-h));
+}
+
+/* Titres de sections (cinémas) */
+h2{
+  text-align: center;
+  margin: 28px 0 12px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+/* ---------- Listes de films ---------- */
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;               /* utile si tu veux limiter la largeur */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 12px;
+  justify-content: center;      /* centre la grille quand il reste de l’espace */
+}
+
+li{
+  background: linear-gradient(180deg, var(--card), #150e2e);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+li strong{
+  color: var(--violet-2);
+  font-weight: 800;
+}
+
+li::before{
+  content: "🎬";
+  margin-right: 6px;
+  opacity: .9;
+}
+
+/* Petits textes (réalisateur) */
+li{
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+/* Responsive : 2 colonnes quand il y a de la place */
+@media (min-width: 1024px){
+  .app-shell{ max-width: 1100px; }
+}

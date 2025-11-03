@@ -1,0 +1,44 @@
+.mon-super-header{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  background: linear-gradient(180deg, #2a1f55, #1e1742);
+  border: 1px solid #342864;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Logo bien visible */
+.mon-super-header > img{
+  height: 80px;           /* <- un peu grand */
+  width: 80px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #4b3aa0;
+  flex-shrink: 0;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+}
+
+/* Contenu centré / fluide */
+.contenu-du-header{
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  color: #e9e6ff;
+}
+
+/* Titre éventuel à l'intérieur */
+.contenu-du-header h1,
+.contenu-du-header h2{
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: .3px;
+}
+
+/* Emoji baguette magique discret */
+.contenu-du-header:has(*){
+  font-variant-ligatures: no-common-ligatures;
+}
