@@ -17,7 +17,7 @@ function App() {
       <h1>Vite + React</h1>
       <ClickCounter
         title="Amazing counter"
-        on10ClickMessage="You are a master in the art of clicking !, t'est chaud"
+        on10ClickMessage="t'es chaud"
         onMouseOverMessage="vasy clique ?"
 
       />

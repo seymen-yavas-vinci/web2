@@ -3,7 +3,7 @@ import "./ClickCounter.css";
 
 interface ClickCounterProps {
   title: string;
-  on10ClickMessage?: string; // Optional property
+  on10ClickMessage?: string; 
   onMouseOverMessage?: string;
 }
 
