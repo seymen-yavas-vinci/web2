@@ -8,7 +8,7 @@ interface MovieCardProps {
 
 const MovieCard = ({ movie }: MovieCardProps) => {
   return (
-    <div className="card">
+    <div className="card" data-title={movie.title}>
      
       <div className="card-body">
         <h3 className="card-title">{movie.title}</h3>
