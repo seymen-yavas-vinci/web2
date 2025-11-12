@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import sound from "../../assets/sounds/Infecticide-11-Pizza-Spinoza.mp3";
 import DrinkCard from "./DrinkCard";
 import DrinkMenu from "./DrinkMenu";
@@ -6,7 +6,7 @@ import "./Main.css";
 import PizzaMenu from "./PizzaMenu";
 import type { NewPizza, Pizza } from "../../types";
 import AddPizza from "./AddPizza";
-
+import AudioPlayer from "./AudioPlayer";
 
 const defaultPizzas = [
   {
@@ -34,18 +34,21 @@ const defaultPizzas = [
     title: "Diable",
     content: "Tomates, Mozarella, Chorizo piquant, Jalapenos",
   },
-] ;
+];
 
-const Main = () => {
+interface MainProps {
+  actionToBePerformed: boolean;
+  clearActionToBePerformed: () => void;
+}
 
+const Main = ({actionToBePerformed, clearActionToBePerformed}:MainProps) => {
   const [pizzas, setPizzas] = useState(defaultPizzas);
+  
 
-
-  const addPizza = (newPizza:NewPizza) => {   
+  const addPizza = (newPizza: NewPizza) => {
     const pizzaAdded = { ...newPizza, id: nextPizzaId(pizzas) };
     setPizzas([...pizzas, pizzaAdded]);
   };
-
 
   return (
     <main>
@@ -54,12 +57,13 @@ const Main = () => {
         Because we love JS, you can also click on the header to stop / start the
         music ; )
       </p>
-      <audio id="audioPlayer" controls >
-        <source src={sound} type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
+      <AudioPlayer sound={sound} actionToBePerformed={actionToBePerformed} clearActionToBePerformed={clearActionToBePerformed} />
       <PizzaMenu pizzas={pizzas} />
 
+      {/*  The htmlFor attribute in React is equivalent to the for attribute in standard HTML. 
+      It is used to associate a `<label>` element with an <input> element. 
+      This association is important for accessibility and usability, 
+      as it allows users to click on the label to focus the corresponding input field. */}
       <div>
         <br />
         <AddPizza addPizza={addPizza} />
