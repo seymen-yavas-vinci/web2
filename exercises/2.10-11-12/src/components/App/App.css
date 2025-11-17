@@ -1,0 +1,102 @@
+/* ----- RESET GLOBAL ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #0b0b0d;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+/* ------- VARIABLES ------- */
+:root {
+  --primary: rgb(90, 0, 140); /* couleur principale */
+  --primary-light: rgba(90, 0, 140, 0.3);
+  --primary-shadow: rgba(90, 0, 140, 0.6);
+}
+
+/* ----- LAYOUT GENERAL ----- */
+.page-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ----- HEADER ----- */
+header {
+  background: linear-gradient(135deg, #100f13, #16141d);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 2px solid var(--primary);
+  box-shadow: 0 5px 25px var(--primary-light);
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid var(--primary);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ----- NAVBAR ----- */
+.navbar {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 8px 16px;
+  color: #e5e5e5;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.navbar a:hover {
+  background: var(--primary);
+  border-color: var(--primary-shadow);
+  color: #fff;
+  box-shadow: 0 0 15px var(--primary-shadow);
+  transform: translateY(-2px);
+}
+
+.navbar a.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  margin-top: 60px;
+  padding: 25px;
+  background: #100f13;
+  text-align: center;
+  border-top: 2px solid var(--primary);
+}
+
+footer img {
+  width: 70px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 2px solid var(--primary);
+}
+
+footer p {
+  color: #d0d0d0;
+  font-size: 0.9rem;
+}

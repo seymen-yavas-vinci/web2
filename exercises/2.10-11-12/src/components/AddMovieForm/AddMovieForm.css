@@ -1,0 +1,112 @@
+:root {
+  --primary: rgb(90, 0, 140);
+  --primary-light: rgba(90, 0, 140, 0.3);
+  --primary-shadow: rgba(90, 0, 140, 0.6);
+
+  --bg-dark: #15131b;
+  --bg-light: #1d1b24;
+}
+
+/* ----- CONTAINER ----- */
+.add-movie-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px 35px;
+
+  background: var(--bg-dark);
+  border-radius: 15px;
+  border: 1px solid var(--primary);
+
+  box-shadow: 0 0 25px var(--primary-light);
+  transition: 0.3s ease;
+}
+
+.add-movie-form:hover {
+  box-shadow: 0 0 35px var(--primary-shadow);
+}
+
+/* ----- TITLE ----- */
+.add-movie-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--primary-shadow);
+}
+
+/* ----- FORM GROUP ----- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ----- INPUTS / TEXTAREAS ----- */
+input,
+textarea {
+  background: var(--bg-light);
+  border: 1px solid #2e2a38;
+  padding: 12px;
+  border-radius: 10px;
+  color: #e5e5e5;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary-light);
+}
+
+/* ----- TEXTAREA ----- */
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* ----- PREVIEW IMAGE ----- */
+.preview {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.preview img {
+  width: 180px;
+  border-radius: 12px;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 15px var(--primary-light);
+}
+
+/* ----- BUTTON ----- */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  background: var(--primary);
+  color: #fff;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  background: var(--primary-shadow);
+  box-shadow: 0 0 18px var(--primary-shadow);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,31 @@
+.cinema-block {
+  background: #15131b;
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 20px var(--primary-light);
+}
+
+.cinema-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  padding-left: 10px;
+}
+
+.cinema-block li {
+  background: #1d1b24;
+  padding: 18px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #2e2a38;
+  transition: 0.25s ease;
+}
+
+.cinema-block li:hover {
+  background: #272333;
+  transform: scale(1.02);
+  box-shadow: 0 0 12px var(--primary-light);
+}

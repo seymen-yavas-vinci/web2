@@ -1,0 +1,57 @@
+:root {
+  --primary: rgb(90, 0, 140);
+  --primary-light: rgba(90, 0, 140, 0.3);
+  --primary-shadow: rgba(90, 0, 140, 0.6);
+}
+
+/* ----- CARD ----- */
+.card {
+  background: #15131b;
+  border: 1px solid var(--primary);
+  border-radius: 15px;
+  padding: 18px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 450px;
+
+  box-shadow: 0 5px 20px var(--primary-light);
+  transition: 0.25s ease;
+  overflow: hidden;
+}
+
+/* Effet hover premium */
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px var(--primary-shadow);
+  border-color: var(--primary-shadow);
+}
+
+/* ----- TITRE ----- */
+.card-title {
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--primary-light);
+}
+
+/* ----- IMAGE ----- */
+.card-img-top {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 12px var(--primary-light);
+}
+
+/* ----- TEXTE ----- */
+.card-text {
+  color: #e5e5e5;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.card-text strong {
+  color: var(--primary);
+}
