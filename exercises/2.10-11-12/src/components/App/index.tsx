@@ -10,6 +10,7 @@ import type { Movie,MovieContext } from "../../types";
 const defaultMovies: Movie[] = [
    
     {
+      id:1,
       title: "Spider-Man: Into the Spider-Verse",
       director: "Bob Persichetti, Peter Ramsey, Rodney Rothman",
       duration: 117,
@@ -20,6 +21,7 @@ const defaultMovies: Movie[] = [
       budget: 90,
     },
     {
+      id:2,
       title: "Spider-Man: Across the Spider-Verse",
       director: "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson",
       duration: 140,
@@ -30,6 +32,7 @@ const defaultMovies: Movie[] = [
       budget: 100,
     },
     {
+      id:3,
       title: "Cars",
       director: "John Lasseter",
       duration: 117,
@@ -40,6 +43,7 @@ const defaultMovies: Movie[] = [
       budget: 120,
     },
     {
+      id:4,
       title: "Cars 2",
       director: "John Lasseter, Brad Lewis",
       duration: 106,
@@ -50,6 +54,7 @@ const defaultMovies: Movie[] = [
       budget: 200,
     },
     {
+      id:5,
       title: "Harry Potter and the Sorcerer's Stone",
       director: "Chris Columbus",
       duration: 152,
@@ -60,6 +65,7 @@ const defaultMovies: Movie[] = [
       budget: 125,
     },
     {
+      id:6,
       title: "Harry Potter and the Chamber of Secrets",
       director: "Chris Columbus",
       duration: 161,
@@ -70,6 +76,7 @@ const defaultMovies: Movie[] = [
       budget: 100,
     }, 
     {
+      id:7,
       title: "The Amazing Spider-Man",
       director: "Marc Webb",
       duration: 136,

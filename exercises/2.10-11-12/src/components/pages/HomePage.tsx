@@ -1,17 +1,20 @@
-
-import "../HomePage/HomePage.css";
+import { useOutletContext } from "react-router-dom";
+import MovieTitleList from "../MovieTitleList";
+import PageTitle from "../PageTitle";
+import type { MovieContext } from "../../types";
 
 const HomePage = () => {
+  const { movies }: MovieContext = useOutletContext();
   return (
-    <div className="home-container">
-      <h1 className="home-title">myMovies</h1>
-
-      <p className="home-description">
-        Welcome to myMovies, a site where you can explore movies, cinemas,
-        directors, durations and discover everything about the world of cinema.
+    <div>
+      <PageTitle title="myMovies" />
+      <p>
+        Welcome to myMovies, a site where you can find info about cinemas,
+        movies...
       </p>
+      <h4>My favorites movies </h4>
+      <MovieTitleList movies={movies} />
     </div>
   );
 };
-
 export default HomePage;
