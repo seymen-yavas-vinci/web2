@@ -8,19 +8,24 @@ interface Joke {
 const App = () => {
   const [joke, setJoke] = useState<Joke | undefined>(undefined);
 
-  useEffect(() => {
+ const fetchJoke  = () => {
     fetch("https://v2.jokeapi.dev/joke/Dark?type=single")
 
       .then((response) => {
         return response.json();
       })
-      
+
       .then((data) => {
         setJoke({
           joke: data.joke ?? "No joke found",
           category: data.category ?? "Unknown",
         });
       });
+  };
+
+  useEffect(() => {
+    fetchJoke();
+    setInterval(fetchJoke, 10000);
   }, []);
 
   if (!joke) {
